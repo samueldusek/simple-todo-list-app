@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import NewTodoForm from "./NewTodoForm";
 import { v4 as uuidv4 } from "uuid";
 import Todo from "./Todo";
+import "./TodoList.css";
 
 class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: [{ id: uuidv4(), task: "Wash the dishes!", completed: false }],
+      todos: [
+        { id: uuidv4(), task: "Wash the dishes!", completed: false },
+        { id: uuidv4(), task: "Walk the dog!", completed: false },
+        { id: uuidv4(), task: "Buy groceries!", completed: false },
+      ],
     };
     this.addTodo = this.addTodo.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
@@ -56,9 +61,11 @@ class TodoList extends Component {
       />
     ));
     return (
-      <div>
+      <div className="TodoList">
         <h1>Todo List</h1>
+        <hr />
         <NewTodoForm addTodo={this.addTodo} />
+        <hr />
         <ul>{todos}</ul>
       </div>
     );

@@ -37,29 +37,36 @@ class Todo extends Component {
     let result;
     if (this.state.isEditing) {
       result = (
-        <div>
+        <div className="Todo">
           <form onSubmit={this.handleUpdate}>
             <input
               type="text"
+              placeholder={this.state.task}
               value={this.state.task}
               name="task"
               onChange={this.handleChange}
             />
-            <button>Save</button>
+            <button className="saveBtn">Save</button>
           </form>
         </div>
       );
     } else {
       result = (
-        <div>
+        <div className="Todo">
           <li
             className={this.props.completed ? "completed" : ""}
             onClick={this.handleToggle}
           >
             {this.props.task}
           </li>
-          <button onClick={this.handleClick}>X</button>
-          <button onClick={this.toggleForm}>E</button>
+          <div className="btns">
+            <button onClick={this.handleClick}>
+              <i className="bi bi-trash"></i>
+            </button>
+            <button onClick={this.toggleForm}>
+              <i className="bi bi-pencil-square"></i>
+            </button>
+          </div>
         </div>
       );
     }

@@ -1,4 +1,87 @@
-.completed {
-  color: lightgray;
+.Todo,
+.Todo form {
+  display: flex;
+  width: 98%;
+  margin: 15px 1%;
+}
+
+.Todo li {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px 0px;
+  padding-left: 5px;
+  border-radius: 6px;
+  border: 3px solid black;
+  list-style: none;
+  flex: auto;
+  margin-right: 5px;
+}
+
+.Todo .btns {
+  display: flex;
+}
+
+.Todo button {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: 3px solid black;
+  transition: background-color 0.1s ease-out;
+  padding: 0px 5px;
+}
+
+.Todo .saveBtn {
+  margin-right: 0px;
+}
+
+.Todo .btns button:first-of-type {
+  margin-right: 5px;
+}
+
+.Todo button:hover {
+  background-color: black;
+  color: white;
+}
+
+.Todo form input {
+  flex: auto;
+  font-size: 1.2rem;
+  padding: 5px 0px;
+  border: none;
+  border-bottom: 3px solid black;
+  margin-right: 5px;
+  padding-left: 5px;
+}
+
+.Todo li:hover {
   text-decoration: line-through;
+}
+
+.Todo .completed {
+  background-color: #f4f4ed;
+  text-decoration: line-through;
+}
+
+@media (max-width: 400px) {
+  .Todo,
+  .Todo form {
+    flex-direction: column;
+  }
+  .Todo li,
+  .Todo form input {
+    margin-right: 0px;
+  }
+  .Todo .btns,
+  .Todo form button {
+    margin-top: 5px;
+  }
+  .Todo .btns button {
+    flex: auto;
+  }
 }
