@@ -5,3 +5,5 @@ To run this app just write:
 `npm install`
 into your command line and then:
 `npm start`
+
+This app was inspired by the Section 15 in [The Modern React Bootcamp (Hooks, Context, NextJS, Router)](https://www.udemy.com/share/101WbGAEYZeVhUQn8B/).
